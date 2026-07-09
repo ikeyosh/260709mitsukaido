@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light;
+  font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: linear-gradient(135deg, #eef7ff 0%, #fef1f7 100%);
+  color: #17324d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.hero,
+.panel {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #dce9f7;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(23, 50, 77, 0.08);
+  padding: 24px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #e7f4ff;
+  color: #1875bc;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.question {
+  margin-bottom: 18px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #f8fbff;
+}
+
+.question label:first-child {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #3d8bff, #5e8cff);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.error {
+  min-height: 1.2em;
+  margin-top: 12px;
+  color: #c94f5f;
+  font-weight: 700;
+}
+
+.summary {
+  padding: 14px;
+  border-radius: 14px;
+  background: #f6f3ff;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.result-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-bottom: 12px;
+}
+
+.result-grid article {
+  border-radius: 16px;
+  padding: 14px;
+  background: #f9fcff;
+  border: 1px solid #e2ecf7;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 14px;
+  }
+
+  .hero,
+  .panel {
+    padding: 18px;
+  }
+}

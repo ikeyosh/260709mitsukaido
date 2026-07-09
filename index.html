@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宿題と気分のセルフチェック</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">生徒向け自己分析アプリ</p>
+        <h1>宿題・気分・行動のセルフチェック</h1>
+        <p>
+          宿題の管理、性格の傾向、気分のゆらぎ、行動のクセを見て、今日の意思決定を支えます。
+        </p>
+      </header>
+
+      <section class="panel">
+        <form id="selfCheckForm">
+          <div class="question">
+            <label for="q1">1. 宿題の管理は、今日も順調に進められそうですか？</label>
+            <div class="options" id="q1">
+              <label><input type="radio" name="q1" value="1" /> 1: かなり難しい</label>
+              <label><input type="radio" name="q1" value="2" /> 2: 少し難しい</label>
+              <label><input type="radio" name="q1" value="3" /> 3: まあまあ</label>
+              <label><input type="radio" name="q1" value="4" /> 4: かなりできそう</label>
+              <label><input type="radio" name="q1" value="5" /> 5: とてもできそう</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label for="q2">2. 手伝ってほしいことや相談したいことが、すぐに言えますか？</label>
+            <div class="options" id="q2">
+              <label><input type="radio" name="q2" value="1" /> 1: まったく言えない</label>
+              <label><input type="radio" name="q2" value="2" /> 2: 少しだけ言える</label>
+              <label><input type="radio" name="q2" value="3" /> 3: 普通</label>
+              <label><input type="radio" name="q2" value="4" /> 4: かなり言える</label>
+              <label><input type="radio" name="q2" value="5" /> 5: とても言える</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label for="q3">3. 今日の気分は、少し落ち込んでいますか？</label>
+            <div class="options" id="q3">
+              <label><input type="radio" name="q3" value="1" /> 1: まったくない</label>
+              <label><input type="radio" name="q3" value="2" /> 2: 少しある</label>
+              <label><input type="radio" name="q3" value="3" /> 3: 普通</label>
+              <label><input type="radio" name="q3" value="4" /> 4: かなりある</label>
+              <label><input type="radio" name="q3" value="5" /> 5: とてもある</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label for="q4">4. 先延ばしや迷いで、行動に移るのが遅いですか？</label>
+            <div class="options" id="q4">
+              <label><input type="radio" name="q4" value="1" /> 1: ほとんどない</label>
+              <label><input type="radio" name="q4" value="2" /> 2: 少しある</label>
+              <label><input type="radio" name="q4" value="3" /> 3: 普通</label>
+              <label><input type="radio" name="q4" value="4" /> 4: かなりある</label>
+              <label><input type="radio" name="q4" value="5" /> 5: とてもある</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label for="q5">5. 進みたいことと、今の行動はつながっていますか？</label>
+            <div class="options" id="q5">
+              <label><input type="radio" name="q5" value="1" /> 1: かなりつながっていない</label>
+              <label><input type="radio" name="q5" value="2" /> 2: 少しつながっていない</label>
+              <label><input type="radio" name="q5" value="3" /> 3: 普通</label>
+              <label><input type="radio" name="q5" value="4" /> 4: かなりつながっている</label>
+              <label><input type="radio" name="q5" value="5" /> 5: とてもつながっている</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label for="q6">6. 今日の意思決定は、自分でしっかり選べていますか？</label>
+            <div class="options" id="q6">
+              <label><input type="radio" name="q6" value="1" /> 1: かなり難しい</label>
+              <label><input type="radio" name="q6" value="2" /> 2: 少し難しい</label>
+              <label><input type="radio" name="q6" value="3" /> 3: 普通</label>
+              <label><input type="radio" name="q6" value="4" /> 4: かなりできる</label>
+              <label><input type="radio" name="q6" value="5" /> 5: とてもできる</label>
+            </div>
+          </div>
+
+          <button type="submit">分析する</button>
+          <p id="errorMessage" class="error" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="resultSection" class="panel result-card" hidden>
+        <h2>分析結果</h2>
+        <div id="resultSummary" class="summary"></div>
+        <div class="result-grid">
+          <article>
+            <h3>性格の傾向</h3>
+            <p id="personalityType"></p>
+          </article>
+          <article>
+            <h3>気分と行動</h3>
+            <p id="moodBehavior"></p>
+          </article>
+          <article>
+            <h3>今日の一歩</h3>
+            <p id="actionAdvice"></p>
+          </article>
+        </div>
+        <ul id="tipsList"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
